@@ -1,18 +1,12 @@
 def fizzBuzz():
 	for x in range(1,101):
-		fizz = False #multiples of 3
-		buzz = False #multiples of 5
+        fizzBuzz = ""
 		
-		fizz = x % 3 == 0
-		buzz = x % 5 == 0
+		fizzBuzz += "fizz" if x % 3 == 0
+		fizzBuzz += "buzz" if x % 5 == 0
 		
-		if fizz and buzz:
-			
-			print("fizzbuzz")
-		elif fizz:
-			print("fizz")
-		elif buzz:
-			print("buzz")
+        if len(fizzBuzz) != 0:
+            print(fizzBuzz)
 		else:
 			print(x)
 			
