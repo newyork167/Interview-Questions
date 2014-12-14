@@ -7,7 +7,7 @@ void fizzBuzz(int upperLimit){
 	for(;counter <= upperLimit; counter++){
         std::string toPrint = "";
         
-        // New version only requires two modulo operations
+        // New version only requires two modulo operations and two ternary operations
         counter % 3 == 0 ? toPrint += "fizz" : "";
         counter % 5 == 0 ? toPrint += "buzz" : "";
         
