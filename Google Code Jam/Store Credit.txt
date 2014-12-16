@@ -1,0 +1,2 @@
+cases = int(input())
+
