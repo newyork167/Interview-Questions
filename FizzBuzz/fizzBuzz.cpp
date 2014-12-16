@@ -2,9 +2,7 @@
 #import <string>
 
 void fizzBuzz(int upperLimit){
-	int counter = 1;
-	
-	for(;counter <= upperLimit; counter++){
+	for(int counter = 1;counter <= upperLimit; counter++){
         std::string toPrint = "";
         
         // New version only requires two modulo operations and two ternary operations
