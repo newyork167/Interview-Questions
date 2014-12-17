@@ -2,8 +2,6 @@
 
 double sqrt13( int n )
 {
-	// double a = (eventually the main method will plug values into a)
-	double a = (double) n;
 	double x = 1;
  
 	// For loop to get the square root value of the entered number.
