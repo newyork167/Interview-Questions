@@ -1,3 +1,5 @@
+# This method utilizes the Babylonian method to compute the square root
+
 double sqrt13( int n )
 {
 	// double a = (eventually the main method will plug values into a)
