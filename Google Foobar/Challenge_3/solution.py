@@ -16,6 +16,15 @@ def​ ​solution(n,​ ​b):
 
 # TODO: Convert to python 2.7 because Google
 
+def numberToBase(n, b):
+    if n == 0:
+        return [0]
+    digits = []
+    while n:
+        digits.append(int(n % b))
+        n //= b
+    return "".join(map(str, digits[::-1]))
+
 def solution(n, b):
     minions = {}
     k = len(n)
@@ -32,14 +41,7 @@ def solution(n, b):
         z = int(x, b) - int(y, b)
 
         # From https://stackoverflow.com/questions/2267362/how-to-convert-an-integer-to-a-string-in-any-base
-        if z != 0:
-            digits = []
-            while z:
-                digits.append(int(z % b))
-                z //= b
-            z = "".join(map(str, digits[::-1]))
-
-        z = str(z).zfill(k)
+        z = numberToBase(z, b).zfill(k)
 
         n = z
 
