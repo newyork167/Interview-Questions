@@ -8,10 +8,6 @@ Level 2:  50% [=====================.....................]
 Level 3:   0% [..........................................]
 Level 4:   0% [..........................................]
 Level 5:   0% [..........................................]
-
-foobar:~/hey-i-already-did-that newyork167$ cat solution.py 
-def​ ​solution(n,​ ​b):
-​ ​​ ​​ ​​ ​#Your​ ​code​ ​here
 """
 
 # TODO: Convert to python 2.7 because Google
@@ -33,7 +29,11 @@ def solution(n, b):
         minions[n] = minions.get(n, 0) + 1
 
         if minions[n] >= 3:
-            return 1 + sum(map((2).__eq__, minions.values()))
+            twos = 0
+            for i in minions.keys():
+                if minions[i] == 2:
+                    twos += 1
+            return 1 + twos
         
         y = "".join(sorted(n))
         x = y[::-1]
@@ -52,4 +52,4 @@ if __name__ == '__main__':
     ]
 
     for i, solve in enumerate(to_solve):
-        print(f"Solution {i}: {solution(solve[0], solve[1])}")
+        print("Solution " + str(i) + ": " + str(solution(solve[0], solve[1])))
